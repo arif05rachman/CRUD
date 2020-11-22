@@ -71,21 +71,21 @@ export default () => {
               {products
                 ? products.map((value, idx) => {
                     return (
-                      <tr key={value.id}>
+                      <tr key={value._id}>
                         <td>{idx + 1}</td>
                         <td>{value.name}</td>
                         <td>{value.price}</td>
                         <td>{value.stock}</td>
                         <td>{value.date}</td>
                         <td className="d-flex justify-content-center align-item-center">
-                          <Button size="sm" variant="primary" className="mr-1" onClick={()=>{history.push('update/'+value.id)}}>
+                          <Button size="sm" variant="primary" className="mr-1" onClick={()=>{history.push('update/'+value._id)}}>
                             Update
                           </Button>
                           <Button
                             size="sm"
                             variant="info"
                             className="mr-1"
-                            onClick={() => handleDelete(value.id)}
+                            onClick={() => handleDelete(value._id)}
                           >
                             Delete
                           </Button>
